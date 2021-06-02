@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-cypress-cucumber/e2e-util": ["libs/e2e-util/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
