@@ -8,7 +8,7 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
-    "e2e": "nx e2e",
+    "e2e": "nx e2e example-e2e",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
@@ -55,11 +55,13 @@
     "@nrwl/linter": "12.3.5",
     "@nrwl/tao": "12.3.5",
     "@nrwl/workspace": "12.3.5",
+    "@types/cypress-cucumber-preprocessor": "^4.0.0",
     "@types/jest": "26.0.8",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "4.19.0",
     "@typescript-eslint/parser": "4.19.0",
     "cypress": "^7.3.0",
+    "cypress-cucumber-preprocessor": "^4.1.1",
     "dotenv": "8.2.0",
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
@@ -70,5 +72,9 @@
     "ts-jest": "26.5.5",
     "ts-node": "~9.1.1",
     "typescript": "~4.2.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "src/integration"
   }
 }
